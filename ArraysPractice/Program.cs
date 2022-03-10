@@ -6,32 +6,35 @@ namespace ArraysPractice
     {
         static void Main(string[] args)
         {
-            //Using a for loop to index and determine the maximum
-            int[] numbers = { 3, -5, 10, 3, 12, 20, 5 };
+            //2D String array
+            string[,] threeOfAKind = {
+                { "Strawberry", "Blueberry", "Gooseberry" },
+                { "Red", "Yellow", "Blue" },
+                { "Atlantic", "Pacific", "Indian" }
+            };
 
-            // The first element is the current max
-            int max = numbers[0];
+            Console.WriteLine($"{threeOfAKind}");       //how can I see this other than by indexing?
 
-            for (int i = 1; i < numbers.Length; i++)
+            //3D Int array
+            int[,,] valueCube = {
             {
-                if (numbers[i] > max)
-                {
-                    max = numbers[i];
-                }
-            }
-            Console.WriteLine($"The max value is {max}");
-
-            //Using a for loop to index and determine minimum
-            int min = numbers[0];
-            for (int i = 1; i < numbers.Length; i++)
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 }
+            },
             {
-                if (numbers[i] < min)
-                {
-                    min = numbers[i];
-                }
+                { 11, 12, 13 },
+                { 14, 15, 16 },
+                { 17, 18, 19 }
+            },
+            {
+                { 21, 22, 23 },
+                { 24, 25, 26 },
+                { 27, 28, 29 }
             }
+            };
 
-            Console.WriteLine($"The min value is {min}");
+            Console.WriteLine($"{valueCube}");
 
         }
     }
