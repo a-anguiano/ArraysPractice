@@ -6,18 +6,20 @@ namespace ArraysPractice
     {
         static void Main(string[] args)
         {
-            //2D String array
-            string[,] threeOfAKind = {
-                { "Strawberry", "Blueberry", "Gooseberry" },
-                { "Red", "Yellow", "Blue" },
-                { "Atlantic", "Pacific", "Indian" }
-            };
+            int[][] familyAges = new int[3][];
 
-            string element = threeOfAKind[1, 2];
+            familyAges[0] = new int[] { 44, 44, 13, 16, 20 };
+            familyAges[1] = new int[] { 32, 34, 3, 5 };
+            familyAges[2] = new int[] { 55, 53 };
 
-            Console.WriteLine(element);            // Blue
-            Console.WriteLine(threeOfAKind[2, 0]); // Atlantic
-
+            for (int i = 0; i < familyAges.Length; i++)
+            {
+                Console.WriteLine($"Element {i}");
+                for (int j = 0; j < familyAges[i].Length; j++)
+                {
+                    Console.WriteLine($"{j}:{familyAges[i][j]}");
+                }
+            }
         }
     }
 }
