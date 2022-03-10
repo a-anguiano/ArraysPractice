@@ -6,18 +6,33 @@ namespace ArraysPractice
     {
         static void Main(string[] args)
         {
-            //using while loop with arrays and also indexing
-            string[] elements = { "Hydrogen", "Helium", "Lithium", "Beryllium" };
+            //Using a for loop to index and determine the maximum
+            int[] numbers = { 3, -5, 10, 3, 12, 20, 5 };
 
-            // loop from front to back
-            int index = 0; // start of array
-            while (index < elements.Length)
+            // The first element is the current max
+            int max = numbers[0];
+
+            for (int i = 1; i < numbers.Length; i++)
             {
-                Console.WriteLine($"The element at index {index} is {elements[index]}");
-                index++;
+                if (numbers[i] > max)
+                {
+                    max = numbers[i];
+                }
+            }
+            Console.WriteLine($"The max value is {max}");
+
+            //Using a for loop to index and determine minimum
+            int min = numbers[0];
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i] < min)
+                {
+                    min = numbers[i];
+                }
             }
 
-         
+            Console.WriteLine($"The min value is {min}");
+
         }
     }
 }
